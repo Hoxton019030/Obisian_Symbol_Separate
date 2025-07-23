@@ -1,0 +1,14 @@
+{
+  "name": "obsidian-cjk-spacing",
+  "version": "0.0.1",
+  "description": "Add space between Chinese and English characters.",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "obsidian": "latest",
+    "rollup": "^3.0.0",
+    "rollup-plugin-typescript2": "^0.35.0",
+    "typescript": "^5.0.0"
+  }
+}

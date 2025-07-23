@@ -1,0 +1,10 @@
+{
+  "id": "Obisian_Symbol_Separate",
+  "name": "Symbol_Separate",
+  "version": "1.0.0",
+  "minAppVersion": "0.12.0",
+  "description": "自動為中英文與運算符之間加入空格",
+  "author": "Hoxton",
+  "authorUrl": "https://hoxtoncraft.com",
+  "main": "main.js"
+}
