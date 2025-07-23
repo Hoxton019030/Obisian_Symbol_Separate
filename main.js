@@ -6,7 +6,7 @@ class CJKSpacingPlugin extends obsidian.Plugin {
     async onload() {
         console.log("✅ CJKSpacingPlugin loaded!");
         this.addCommand({
-            id: "Symbol-Separate",
+            id: "add-space-between-cjk-and-en",
             name: "整理中英與運算符空格",
             editorCallback: (editor) => {
                 const selectedText = editor.getSelection();
