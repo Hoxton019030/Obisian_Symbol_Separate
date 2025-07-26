@@ -44,7 +44,19 @@ function addSpaceBetweenCJKAndEn(text: string): string {
     // 雙等號以上視為一組
     .replace(/([^\s])([=]{2,})([^\s])/g, "$1 $2 $3")
 
-    // 清除多餘空格
+    // LaTeX ($...$) 前後補空格
+    .replace(/([^\s])(\$[^$]+\$)/g, "$1 $2")
+    .replace(/(\$[^$]+\$)([^\s])/g, "$1 $2")
+
+    // 🔥 整理 {1,3,5,7} 成為 { 1 , 3 , 5 , 7 }
+  .replace(/\{([0-9,\s]+)\}/g, (match, p1) => {
+  const numbers = p1.split(",").map((s: string) => s.trim()).join(" , ");
+  return `{ ${numbers} }`;
+})
+
+    // 清除重複空格
     .replace(/ +/g, " ")
     .trim();
 }
+
+
